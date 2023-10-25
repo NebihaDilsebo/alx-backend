@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 2. LIFO Caching
+""" 4. MRU Caching
 """
 
 from collections import deque
@@ -7,9 +7,9 @@ from collections import deque
 BaseCaching = __import__("base_caching").BaseCaching
 
 
-class LIFOCache(BaseCaching):
-    """ You must use self.cache_data - dictionary from the parent class
-    BaseCaching
+class MRUCache(BaseCaching):
+    """ Create a class MRUCache that inherits from BaseCaching and is a caching
+    system
     """
 
     def __init__(self):
@@ -33,7 +33,10 @@ class LIFOCache(BaseCaching):
     def get(self, key):
         """ Must return the value in self.cache_data linked to key.
         """
-        return self.cache_data.get(key, None)
+        if key in self.cache_data:
+            self.queue.remove(key)
+            self.queue.append(key)
+            return self.cache_data.get(key)
 
     def is_full(self):
         """ If the number of items in self.cache_data is higher that
@@ -43,7 +46,7 @@ class LIFOCache(BaseCaching):
 
     def evict(self):
         """ you must print DISCARD: with the key discarded and following by a
-        new line -pop-
+        new line
         """
         popped = self.queue.pop()
         del self.cache_data[popped]
