@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 """FIFOCache class that inherits from BaseCaching"""
+
+from collections import deque
+
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class FIFOCache(BasaCaching):
+class FIFOCache(BaseCaching):
     """ A caching system that uses the FIFO algorithm """
 
     def __init__(self):
