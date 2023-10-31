@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ _('home_title') }}</title>
+</head>
+<body>
+    <h1>{{ _('home_header') }}</h1>
+    
+    <p>Select a language:</p>
+    <form action="" method="post">
+        <select name="language">
+            <option value="en">{{ _('English') }}</option>
+            <option value="fr">{{ _('French') }}</option>
+        </select>
+        <input type="submit" value="{{ _('Change Language') }}">
+    </form>
+
+    <p>{{ _('This is a translation example.') }}</p>
+</body>
+</html>
+
