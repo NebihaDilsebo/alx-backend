@@ -31,8 +31,6 @@ def get_locale():
     """Get the best matching language for user."""
     return request.accept_languages.best_match(Config.LANGUAGES)
 
-babel.init_app(app, locale_selector=get_locale)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
