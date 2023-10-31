@@ -12,6 +12,7 @@ msgstr "Welcome to Holberton"
 
 msgid home_header
 msgstr "Hello world!"
+
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2023-10-31 03:27-0700\n"
