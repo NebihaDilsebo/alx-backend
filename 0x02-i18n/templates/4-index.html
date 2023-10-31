@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{ _('home_title') }}</title>
-  </head>
-  <body>
-    <h1>{{ _('home_header') }}</h1>
-  </body>
+<head>
+    <!-- Your HTML header content -->
+</head>
+<body>
+    <h1>
+        {% if locale == 'fr' %}
+            {{ _('Repo en français') }}
+        {% else %}
+            {{ _('Repo in English') }}
+        {% endif %}
+    </h1>
+</body>
 </html>
+
